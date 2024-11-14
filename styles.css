@@ -173,7 +173,7 @@ main{
 .navBtns{
     position: absolute;
     right: 40px;
-    top: 50px;
+    top: 35px;
 }
 
 
@@ -823,6 +823,9 @@ footer{
         display: none;
     }
 
+    .logoImage{
+        width: 100px;
+    }
 
 
     .navMobile{
@@ -966,8 +969,12 @@ footer{
 
     .servicesContainer{
         padding-top: 50px;
+        padding-bottom: 50px;
     }
 
+    .servicesPage{
+        padding-bottom: 50px;
+    }
 
 
     .earAndNosePage{
@@ -980,6 +987,13 @@ footer{
     .candleRight img{
         width: 80vw;
     }
+
+
+    section{
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+
 
 
 
@@ -1022,6 +1036,14 @@ footer{
         display: block;
     }
 
+    .contactPage h1{
+        padding-top: 0;
+    }
+
+
+    .contactLeft p{
+        font-size: clamp(1rem, 4vw, 1.3rem);
+    }
 
     .contactInputs{
         width: clamp(200px, 85vw, 85vw);
@@ -1080,11 +1102,53 @@ footer{
     .moreAboutUsPage h1{
         padding-bottom: 50px;
     }
+
+
+
+
+    .contactLeft{
+       scale: 0.9;
+    }
+
+
+    .contactPage h1{
+        padding: 50px 0;
+    }
 }
+@media (max-width: 375px){
+    .contactLeft{
+        scale: 0.8;
+     }
+}
+@media (max-width: 345px){
+    .contactLeft{
+        scale: 0.7;
+    }
+
+    .contactPage h1{
+        padding: 50px 0 20px 0;
+    }
+
+     
+}
+
+
+
+
 
 
 @media (max-width: 300px){
     .servicesContainer{
         scale: 0.8;
+    }
+
+
+    .contactLeft{
+        scale: 0.6;
+     }
+
+
+     .contactPage h1{
+        padding: 50px 0 0 0;
     }
 }
