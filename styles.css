@@ -830,25 +830,34 @@ footer{
 
     .navMobile{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-
-
         position: fixed;
         width: 100%;
         height: 100%;
 
+        margin: auto auto;
+
         top: 0;
         left: 100%;
 
-
-        
         background-color: var(--strokePink);
 
         z-index: 2;
 
         transition: all 1s ease;
+    }
+
+    .navMobileInner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        transform: translateY(-25%);
+
+
     }
 
     .navMobile.active{
