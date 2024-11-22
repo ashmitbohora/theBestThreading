@@ -73,9 +73,14 @@ rightArrow.addEventListener("click", () => {
 
 
 
+
+
+
+
 const navBar = document.querySelector(".navBar");
 const navX = document.querySelector(".navX");
 const navMobile = document.querySelector(".navMobile");
+const mobileNavLinks = document.querySelectorAll(".mobileNavLinks");
 
 
 navBar.addEventListener("click", () => {
@@ -89,6 +94,13 @@ navX.addEventListener("click", () => {
 
     navMobile.classList.toggle("active");
     
+});
+
+
+mobileNavLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMobile.classList.remove("active");
+    });
 });
 
 
