@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 
@@ -208,8 +209,12 @@ main{
 .servicesContainer img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    padding-top: 10px;
+    border: 3px solid var(--strokePink);
+    margin-top: 10px;
+
 }
+
+
 
 
 .pricesContainer{
@@ -225,6 +230,9 @@ main{
     border-bottom-right-radius: 10px;
 
     height: 250px;
+
+    border: 3px solid var(--strokePink);
+    border-top: none;
 }
 
 
@@ -286,6 +294,7 @@ main{
     padding-bottom: 30px;
 }
 
+
 .earAndNosePage .container{
 
     display: flex;
@@ -325,6 +334,7 @@ main{
     gap: 100px;
 }
 
+
 .moreAboutUsPage .element{
     display: flex;
     flex-direction: row;
@@ -348,6 +358,8 @@ main{
     object-fit: cover;
 
     border-radius: 10px;
+
+    border: 5px solid var(--strokePink);
 }
 
 
@@ -369,9 +381,13 @@ main{
     padding-bottom: 20px;
 }
 
-.testimonialsPage h3{
+.testimonialHeader h3{
     font-size: 2rem;
     padding-bottom: 20px;
+}
+
+.personName{
+    font-family: var(--fontSecond);
 }
 
 
@@ -485,6 +501,8 @@ main{
 
 
     position: relative;
+
+    
 }
 
 .personInfo{
@@ -521,17 +539,34 @@ main{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+
+    max-height: 113px;
+    min-height: 113px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+}
+
+.personWrittenReview.expanded{
+    max-height: none;
 }
 
 .readMoreButton{
-    display: none;
-}
-.linkToReview{
     position: absolute;
     bottom: 20px;
     right: 20px;
+
+    cursor: pointer;
+}
+.linkToReview{
+    display: none;
 }
 
+.datePosterd{
+    display: none;
+}
 
 
 
@@ -605,7 +640,7 @@ main{
     
 }
 
-.contactInputs::placeholder, .contactRight textarea::placeholder{
+.input::placeholder, textarea::placeholder{
     color: gray;
     font-family: var(--fontSecond);
 }
@@ -615,13 +650,31 @@ main{
     max-height: 200px;
 }
 
-.contactRight a{
+.contactRight button{
+    all: unset;
+}
+
+.contactRight button{
     background-color: #B76E79;
     color: white;
     width: 100%;
     text-align: center;
     padding: 10px 0;
+
+    transition: all 0.2s;
 }
+
+.contactRight button:hover{
+    background-color: #A75C65;
+}
+
+.contactRight button:active{
+    background-color: #943D44;
+}
+
+
+
+
 
 
 

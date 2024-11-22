@@ -90,3 +90,31 @@ navX.addEventListener("click", () => {
     navMobile.classList.toggle("active");
     
 });
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const reviews = document.querySelectorAll('.personWrittenReview');
+
+    reviews.forEach(review => {
+        const readMoreButton = review.querySelector('.readMoreButton');
+
+        readMoreButton.addEventListener('click', () => {
+            review.classList.toggle('expanded');
+            if (review.classList.contains('expanded')) {
+                readMoreButton.textContent = 'Read Less...';
+            } else {
+                readMoreButton.textContent = 'Read More...';
+            }
+        });
+    });
+});
